@@ -4,6 +4,7 @@ import static java.lang.Math.*;
 
 import no.hvl.dat100ptc.TODO;
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
+import no.hvl.dat100ptc.oppgave2.GPSDataConverter;
 
 public class GPSUtils {
 
@@ -44,9 +45,22 @@ public class GPSUtils {
 
 	public static double[] getLatitudes(GPSPoint[] gpspoints) {
 
+		double [] lat = new double[gpspoints.length];
+		
+		
+		for(int i = 0; i < gpspoints.length; i++) {
+			
+			String hent = String.valueOf(gpspoints[i]);
+			String sub = hent.substring();
+			lat [i] = Double.parseDouble(sub);
+			
+		}
+		return lat;
+		
+		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		
 		
 		// TODO - SLUTT
 	}
@@ -55,7 +69,7 @@ public class GPSUtils {
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		
 		
 		// TODO - SLUTT
 
