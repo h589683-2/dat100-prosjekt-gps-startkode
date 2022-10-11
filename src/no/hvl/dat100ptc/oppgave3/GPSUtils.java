@@ -91,14 +91,41 @@ public class GPSUtils {
 
 	public static double distance(GPSPoint gpspoint1, GPSPoint gpspoint2) {
 
-		double d;
+		double d = 0.0;
 		double lat1, lon1, lat2, lon2;
+		
+//		GPSPoint [] p1 = new GPSPoint[1];
+//		p1[0] = gpspoint1;
+//		lat1 = getLatitudes(p1)[0];
+		lat1 = gpspoint1.getLatitude();
+		
+//		GPSPoint [] p2 = new GPSPoint[1];
+//		p2[0] = gpspoint2;
+//		lat2 = getLatitudes(p2)[0];
+		lat2 = gpspoint2.getLatitude();
+		
+//		GPSPoint [] p3 = new GPSPoint[1];
+//		p3[0] = gpspoint1;
+//		lon1 = getLongitudes(p3)[0];
+		lon1 = gpspoint1.getLongitude();
+		
+//		GPSPoint [] p4 = new GPSPoint[1];
+//		p4[0] = gpspoint2;
+//		lon2 = getLongitudes(p4)[0];
+		lon2 = gpspoint2.getLongitude();
+		
+		double radLat = toRadians(lat2 - lat1);
+		double radLon = toRadians(lon2 - lon1);
+		
+		double a = pow(sin(radLat/2),2) + cos(toRadians(lat1)) * cos(toRadians(lat2)) * pow(sin(radLon/2),2);
+		double c = 2 * atan2(sqrt(a),sqrt(1-a));
+		d = R * c;
+		
+		return d;
 
-		lat1 = toRadians(getLatitudes(gpspoint1));
-		lat2 = toRadians(getLatitudes(gpspoint2));
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+	
 
 		// TODO - SLUTT
 
@@ -107,10 +134,10 @@ public class GPSUtils {
 	public static double speed(GPSPoint gpspoint1, GPSPoint gpspoint2) {
 
 		int secs;
-		double speed;
+		double speed = 0;
 		
 		
-		
+		return speed;
 		
 
 		// TODO - START
