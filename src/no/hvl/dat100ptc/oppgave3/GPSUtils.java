@@ -134,8 +134,11 @@ public class GPSUtils {
 	public static double speed(GPSPoint gpspoint1, GPSPoint gpspoint2) {
 
 		int secs;
-		double speed = 0;
+		double speed;
+		double b = distance(gpspoint1,gpspoint2)/1000;
+		secs = gpspoint2.getTime() - gpspoint1.getTime();
 		
+		speed = (b/secs)*3600;
 		
 		return speed;
 		
