@@ -51,7 +51,7 @@ public class GPSUtils {
 		for(int i = 0; i < gpspoints.length; i++) {
 			
 			String hent = String.valueOf(gpspoints[i]);
-			String sub = hent.substring();
+			String sub = hent.substring( hent.indexOf('(') + 1, hent.indexOf(','));
 			lat [i] = Double.parseDouble(sub);
 			
 		}
