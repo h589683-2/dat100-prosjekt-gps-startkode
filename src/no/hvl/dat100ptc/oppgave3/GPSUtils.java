@@ -1,5 +1,6 @@
 package no.hvl.dat100ptc.oppgave3;
 
+import static java.lang.Integer.parseInt;
 import static java.lang.Math.*;
 
 import no.hvl.dat100ptc.TODO;
@@ -155,10 +156,20 @@ public class GPSUtils {
 
 		String timestr;
 		String TIMESEP = ":";
+		
+	
+		int timer = (secs/3600);
+		int minutter = ((secs%3600)/60);
+		int sekunder = (secs%60);
+		String.format(TIMESEP, 00);
+		
+		timestr = timer + ":" + minutter + ":" + sekunder;
+		System.out.println(timestr);
+		
+		return timestr;
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - SLUTT
 
