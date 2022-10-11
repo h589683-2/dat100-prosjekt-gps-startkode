@@ -67,6 +67,18 @@ public class GPSUtils {
 
 	public static double[] getLongitudes(GPSPoint[] gpspoints) {
 
+		double [] lon = new double[gpspoints.length];
+		
+		
+		for(int i = 0; i < gpspoints.length; i++) {
+			
+			String hent = String.valueOf(gpspoints[i]);
+			String sub = hent.substring( hent.indexOf(',') + 1, hent.indexOf(')'));
+			lon[i] = Double.parseDouble(sub);
+			
+		}
+		return lon;
+		
 		// TODO - START
 
 		
