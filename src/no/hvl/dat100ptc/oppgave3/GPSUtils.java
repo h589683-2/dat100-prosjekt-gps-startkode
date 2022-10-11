@@ -92,8 +92,10 @@ public class GPSUtils {
 	public static double distance(GPSPoint gpspoint1, GPSPoint gpspoint2) {
 
 		double d;
-		double latitude1, longitude1, latitude2, longitude2;
+		double lat1, lon1, lat2, lon2;
 
+		lat1 = toRadians(getLatitudes(gpspoint1));
+		lat2 = toRadians(getLatitudes(gpspoint2));
 		// TODO - START
 
 		throw new UnsupportedOperationException(TODO.method());
@@ -106,10 +108,14 @@ public class GPSUtils {
 
 		int secs;
 		double speed;
+		
+		
+		
+		
 
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		
 
 		// TODO - SLUTT
 
