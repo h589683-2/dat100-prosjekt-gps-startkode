@@ -3,6 +3,8 @@ package no.hvl.dat100ptc.oppgave3;
 import static java.lang.Integer.parseInt;
 import static java.lang.Math.*;
 
+import java.util.Locale;
+
 import no.hvl.dat100ptc.TODO;
 import no.hvl.dat100ptc.oppgave1.GPSPoint;
 import no.hvl.dat100ptc.oppgave2.GPSDataConverter;
@@ -168,12 +170,13 @@ public class GPSUtils {
 		
 //		timestr = String.format("%1$s %4$s  %2$s' '%4$s' '%02d %3$s'",timers,minutters,sekunders,TIMESEP);
 		
+		//%02d gir at det skal være minst 2 tall og %4$s sier at den skal ta fjerde string (her TIMESEP)
 		timestr = String.format("  " + "%02d" + "%4$s" + "%02d" + "%4$s" + "%02d",timer,minutter,sekunder,TIMESEP);
 		
 		
 		
 		
-		System.out.println(timestr);
+//		System.out.println(timestr);
 		
 
 		
@@ -188,12 +191,17 @@ public class GPSUtils {
 	private static int TEXTWIDTH = 10;
 
 	public static String formatDouble(double d) {
-
+		
 		String str;
-
+		
+		str = String.format(Locale.ROOT, "%10.2f", d);
+		
+//		System.out.println(str);
+		
+		return str;
+		
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUTT
 		
