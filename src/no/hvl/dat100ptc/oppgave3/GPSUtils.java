@@ -161,10 +161,21 @@ public class GPSUtils {
 		int timer = (secs/3600);
 		int minutter = ((secs%3600)/60);
 		int sekunder = (secs%60);
-		String.format(TIMESEP, 00);
 		
-		timestr = timer + ":" + minutter + ":" + sekunder;
+//		String timers = String.format("%02d", timer);
+//		String minutters = String.format("%02d", minutter);
+//		String sekunders = String.format("%02d", sekunder);
+		
+//		timestr = String.format("%1$s %4$s  %2$s' '%4$s' '%02d %3$s'",timers,minutters,sekunders,TIMESEP);
+		
+		timestr = String.format("  " + "%02d" + "%4$s" + "%02d" + "%4$s" + "%02d",timer,minutter,sekunder,TIMESEP);
+		
+		
+		
+		
 		System.out.println(timestr);
+		
+
 		
 		return timestr;
 
