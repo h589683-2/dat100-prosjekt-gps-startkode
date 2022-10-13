@@ -118,9 +118,10 @@ public class GPSComputer {
 		double met = 0;		
 		double speedmph = speed * MS;
 
+		
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		
 
 		// TODO - SLUTT
 		
@@ -144,6 +145,12 @@ public class GPSComputer {
 
 		System.out.println("==============================================");
 
+		System.out.println("Total Time\t:\t" + GPSUtils.formatTime(totalTime()));
+		System.out.println("Total Distance\t:\t" + totalDistance());
+		System.out.println("Total elevation\t:\t" + totalElevation());
+		System.out.println("Max speed\t:\t" + maxSpeed());
+		System.out.println("Average speed\t:\t" + averageSpeed());
+		System.out.println("Energy\t:\t" + totalKcal());
 		// TODO - START
 
 		throw new UnsupportedOperationException(TODO.method());
