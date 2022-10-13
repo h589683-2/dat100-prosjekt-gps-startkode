@@ -84,7 +84,7 @@ public class GPSComputer {
 		
 		for (int i = 0; i < speed.length; i++) {
 			speed[i] = GPSUtils.speed(gpspoints[i], gpspoints[i+1]);
-			System.out.println("speed " + speed[i] + "\n");
+			
 		}
 		
 		return speed;
@@ -93,14 +93,14 @@ public class GPSComputer {
 
 	}
 	
+	//Finner mellom hvilke to punkter det var høyest fart og returnerer farten
 	public double maxSpeed() {
 		
 		double maxspeed = 0;
 		
 		// TODO - START
-		
+		int i = 0;
 		maxspeed = GPSUtils.findMax(speeds());
-		
 		return maxspeed;
 		// TODO - SLUTT
 		
@@ -155,7 +155,11 @@ public class GPSComputer {
 		// MET: Metabolic equivalent of task angir (kcal x kg-1 x h-1)
 		double met = 0;		
 		double speedmph = speed * MS;
+		
+		
 
+		
+		
 		
 		// TODO - START
 		
@@ -188,10 +192,10 @@ public class GPSComputer {
 		System.out.println("Total elevation\t:\t" + totalElevation());
 		System.out.println("Max speed\t:\t" + maxSpeed());
 		System.out.println("Average speed\t:\t" + averageSpeed());
-		System.out.println("Energy\t:\t" + totalKcal());
+//		System.out.println("Energy\t:\t" + totalKcal());
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+		
 		
 		// TODO - SLUTT
 		
