@@ -82,8 +82,9 @@ public class GPSComputer {
 		
 		double[] speed = new double [gpspoints.length - 1];
 		
-		for (int i = 0; i < gpspoints.length - 1; i++) {
+		for (int i = 0; i < speed.length; i++) {
 			speed[i] = GPSUtils.speed(gpspoints[i], gpspoints[i+1]);
+			System.out.println("speed " + speed[i] + "\n");
 		}
 		
 		return speed;
@@ -109,13 +110,24 @@ public class GPSComputer {
 
 		double average = 0;
 		
+		
+		
 		// TODO - START
 		double sum = 0;
-		for (double value : speeds()) {
-			sum += value;
-		}
-		average = sum / speeds().length;
 		
+		//Tror feilen ligger i at speed regner gjennomsnitt mellom hvert ppunk, så da blir det feil når 
+		//vi skal regne gjennomsnitt på hele turen
+		
+		double time = totalTime();
+		double dis = totalDistance();
+		
+		average = (dis/time)*3.6;
+		
+//		for (double value : speeds()) {
+//			sum += value;
+//		}
+//		average = sum / speeds().length;
+//		
 		return average;
 		
 		
