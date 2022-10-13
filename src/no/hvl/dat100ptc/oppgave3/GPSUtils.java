@@ -117,6 +117,7 @@ public class GPSUtils {
 //		lon2 = getLongitudes(p4)[0];
 		lon2 = gpspoint2.getLongitude();
 		
+		//Følger formelene gitt i oppgaven
 		double radLat = toRadians(lat2 - lat1);
 		double radLon = toRadians(lon2 - lon1);
 		
@@ -138,9 +139,14 @@ public class GPSUtils {
 
 		int secs;
 		double speed;
+		
+		//Distanse i meter og tid i sekunder. 
 		double b = distance(gpspoint1,gpspoint2)/1000;
+		
+		//tid fra point 2 - 1 gir tiden mellom
 		secs = gpspoint2.getTime() - gpspoint1.getTime();
 		
+		//m/s * 3600 = km/t
 		speed = (b/secs)*3600;
 		
 		return speed;
