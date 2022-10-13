@@ -193,8 +193,7 @@ public class GPSComputer {
 		
 		return kcal;
 
-		
-		
+	
 		
 		// TODO - START
 		
@@ -228,7 +227,7 @@ public class GPSComputer {
 
 		// TODO - START
 		
-		// er noe feil her
+		
 		for (int i = 0; i < gpspoints.length - 1; i++) {
 			int secs = (int)GPSUtils.time(gpspoints[i], gpspoints[i+1]);
 			double speed = GPSUtils.speed(gpspoints[i], gpspoints[i+1]) / 3.6;
