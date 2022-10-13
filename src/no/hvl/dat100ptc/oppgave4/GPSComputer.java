@@ -6,6 +6,7 @@ import no.hvl.dat100ptc.oppgave2.GPSData;
 import no.hvl.dat100ptc.oppgave2.GPSDataConverter;
 import no.hvl.dat100ptc.oppgave2.GPSDataFileReader;
 import no.hvl.dat100ptc.oppgave3.GPSUtils;
+import java.lang.Math;
 
 public class GPSComputer {
 	
@@ -150,13 +151,47 @@ public class GPSComputer {
 	// beregn kcal gitt weight og tid der kjøres med en gitt hastighet
 	public double kcal(double weight, int secs, double speed) {
 
-		double kcal;
+		double kcal = 0.0;
 
 		// MET: Metabolic equivalent of task angir (kcal x kg-1 x h-1)
 		double met = 0;		
 		double speedmph = speed * MS;
 		
+		//Må ha int for at switch skal funke
+		int sw = (int) (speedmph);
 		
+		if (sw > 0) {
+		switch(sw) {
+		case 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9:
+			met = 4.0;
+			break;
+			
+		case 10 + 11:
+			met = 6.0;
+			break;
+		
+		case 12 + 13:
+			met = 8.0;
+			break;
+		
+		case 14 + 15:
+			met = 10.0;
+			break;
+		
+		case 16 + 17 + 18 + 19:
+			met = 12.0;
+			break;
+			
+		default:
+			met = 16.0;
+			break;
+		}
+		}
+		
+		kcal = met * weight * secs/3600;
+		
+		
+		return kcal;
 
 		
 		
