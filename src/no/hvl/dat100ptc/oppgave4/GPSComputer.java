@@ -174,7 +174,9 @@ public class GPSComputer {
 		}
 		
 		kcal = weight * met * (secs/3600);
-		
+		System.out.println(met);
+		System.out.println(secs);
+		System.out.println(weight);
 		return kcal;
 
 		// TODO - SLUTT
