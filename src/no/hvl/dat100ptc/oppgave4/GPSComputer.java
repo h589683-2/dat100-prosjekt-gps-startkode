@@ -195,31 +195,6 @@ public class GPSComputer {
 
 		
 		
-		
-		// TODO - START
-		
-		if (speedmph < 10) {
-			met = 4;
-		} else if (speedmph >= 10 && speedmph < 12) {
-			met = 6;
-		} else if (speedmph >= 12 && speedmph < 14) {
-			met = 8;
-		} else if (speedmph >= 14 && speedmph < 16) {
-			met = 10;
-		} else if (speedmph >= 16 && speedmph < 20) {
-			met = 12;
-		} else if (speedmph >= 20) {
-			met = 16;
-		}
-		
-		kcal = weight * met * (secs/3600);
-		System.out.println(met);
-		System.out.println(secs);
-		System.out.println(weight);
-		return kcal;
-
-		// TODO - SLUTT
-		
 	}
 
 	public double totalKcal(double weight) {
@@ -228,7 +203,7 @@ public class GPSComputer {
 
 		// TODO - START
 		
-		// er noe feil her
+		
 		for (int i = 0; i < gpspoints.length - 1; i++) {
 			int secs = (int)GPSUtils.time(gpspoints[i], gpspoints[i+1]);
 			double speed = GPSUtils.speed(gpspoints[i], gpspoints[i+1]) / 3.6;
