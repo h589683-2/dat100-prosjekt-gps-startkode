@@ -252,7 +252,8 @@ public class GPSComputer {
 		System.out.println("Total elevation\t:\t" + totalElevation());
 		System.out.println("Max speed\t:\t" + maxSpeed());
 		System.out.println("Average speed\t:\t" + averageSpeed());
-//		System.out.println("Energy\t:\t" + totalKcal());
+		System.out.println("Energy\t:\t" + totalKcal(WEIGHT));
+		System.out.println("==============================================");
 		// TODO - START
 
 		
