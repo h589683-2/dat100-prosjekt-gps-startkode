@@ -33,13 +33,11 @@ public class GPSComputer {
 
 		// TODO - START
 
-		for (int i = 0; i < gpspoints.length - 1; i++) {
-			distance += GPSUtils.distance(gpspoints[i], gpspoints[i+1]);
-		}
-		
-		return distance;
+		throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUTT
+		
+		
 
 	}
 
@@ -50,13 +48,7 @@ public class GPSComputer {
 
 		// TODO - START
 
-		for (int i = 0; i < gpspoints.length - 1; i++) {
-			if ((GPSUtils.elevation(gpspoints[i], gpspoints[i+1])) > 0) {
-				elevation += GPSUtils.elevation(gpspoints[i], gpspoints[i+1]);
-			}
-		}
-		
-		return elevation;
+		throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUTT
 
@@ -64,13 +56,8 @@ public class GPSComputer {
 
 	// beregn total tiden for hele turen (i sekunder)
 	public int totalTime() {
-		
-		int time = 0;
-		for (int i = 0; i < gpspoints.length - 1; i++) {
-			time += GPSUtils.time(gpspoints[i], gpspoints[i+1]);
-		}
-		
-		return time;
+
+		throw new UnsupportedOperationException(TODO.method());
 
 	}
 		
@@ -80,14 +67,7 @@ public class GPSComputer {
 		
 		// TODO - START		// OPPGAVE - START
 		
-		double[] speed = new double [gpspoints.length - 1];
-		
-		for (int i = 0; i < speed.length; i++) {
-			speed[i] = GPSUtils.speed(gpspoints[i], gpspoints[i+1]);
-			System.out.println("speed " + speed[i] + "\n");
-		}
-		
-		return speed;
+		throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUTT
 
@@ -99,9 +79,8 @@ public class GPSComputer {
 		
 		// TODO - START
 		
-		maxspeed = GPSUtils.findMax(speeds());
+		throw new UnsupportedOperationException(TODO.method());
 		
-		return maxspeed;
 		// TODO - SLUTT
 		
 	}
@@ -110,26 +89,9 @@ public class GPSComputer {
 
 		double average = 0;
 		
-		
-		
 		// TODO - START
-		double sum = 0;
 		
-		//Tror feilen ligger i at speed regner gjennomsnitt mellom hvert ppunk, så da blir det feil når 
-		//vi skal regne gjennomsnitt på hele turen
-		
-		double time = totalTime();
-		double dis = totalDistance();
-		
-		average = (dis/time)*3.6;
-		
-//		for (double value : speeds()) {
-//			sum += value;
-//		}
-//		average = sum / speeds().length;
-//		
-		return average;
-		
+		throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - SLUTT
 		
