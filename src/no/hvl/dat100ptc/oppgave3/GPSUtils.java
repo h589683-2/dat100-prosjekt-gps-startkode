@@ -206,4 +206,26 @@ public class GPSUtils {
 		// TODO - SLUTT
 		
 	}
+	
+	public static double elevation(GPSPoint gpspoint1, GPSPoint gpspoint2) {
+		
+		double e;
+		
+		double ele1 = gpspoint1.getElevation();
+		double ele2 = gpspoint2.getElevation();
+		e = ele2 - ele1;
+		
+		return e;
+	}
+	
+	public static double time(GPSPoint gpspoint1, GPSPoint gpspoint2) {
+		
+		double t;
+		
+		double time1 = gpspoint1.getTime();
+		double time2 = gpspoint2.getTime();
+		t = time2 - time1;
+		
+		return t;
+	}
 }
