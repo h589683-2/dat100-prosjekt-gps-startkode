@@ -49,7 +49,7 @@ public class ShowProfile extends EasyGraphics {
 		int x = MARGIN,y = ybase;
 
 		// TODO - START
-		int x2 = MARGIN + 1;
+		int x2 = MARGIN ;
 
 		for (int i = 0; i < gpspoints.length -1; i++) {
 			int y2 = (int)gpspoints[i].getElevation();
@@ -58,6 +58,7 @@ public class ShowProfile extends EasyGraphics {
 			}
 			drawLine(x, y, x2, ybase - y2);
 			setColor(0, 0, 225);
+			
 			x += 2;
 			x2 += 2;
 			//System.out.println("x1: " + x + ", y1: " + y + ", x2 :" + x2 + ", y2: " + y2);
