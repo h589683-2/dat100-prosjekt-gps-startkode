@@ -154,46 +154,69 @@ public class GPSComputer {
 		double kcal = 0.0;
 
 		// MET: Metabolic equivalent of task angir (kcal x kg-1 x h-1)
-		double met = 0;		
+		double met = 0.0;		
 		double speedmph = speed * MS;
 		
 		//Må ha int for at switch skal funke
-		int sw = (int) (speedmph);
+//		int sw = (int) (speedmph);
+//		
+//		if (sw > 0) {
+//		switch(sw) {
+//		case 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9:
+//			met = 4.0;
+//			break;
+//			
+//		case 10 + 11:
+//			met = 6.0;
+//			break;
+//		
+//		case 12 + 13:
+//			met = 8.0;
+//			break;
+//		
+//		case 14 + 15:
+//			met = 10.0;
+//			break;
+//		
+//		case 16 + 17 + 18 + 19:
+//			met = 12.0;
+//			break;
+//			
+//		default:
+//			met = 16.0;
+//			break;
+//		}
+//		}
+//		
+//		kcal = met * weight * secs/3600;
+//		
+//		
+//		return kcal;
+
+	
 		
-		if (sw > 0) {
-		switch(sw) {
-		case 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9:
+		// TODO - START
+		
+		if (speedmph < 10) {
 			met = 4.0;
-			break;
-			
-		case 10 + 11:
+		} else if (speedmph >= 10 && speedmph < 12) {
 			met = 6.0;
-			break;
-		
-		case 12 + 13:
+		} else if (speedmph >= 12 && speedmph < 14) {
 			met = 8.0;
-			break;
-		
-		case 14 + 15:
+		} else if (speedmph >= 14 && speedmph < 16) {
 			met = 10.0;
-			break;
-		
-		case 16 + 17 + 18 + 19:
+		} else if (speedmph >= 16 && speedmph < 20) {
 			met = 12.0;
-			break;
-			
-		default:
+		} else if (speedmph >= 20) {
 			met = 16.0;
-			break;
-		}
 		}
 		
-		kcal = met * weight * secs/3600;
 		
+		kcal = weight * met * (secs/3600.0);
 		
 		return kcal;
 
-		
+		// TODO - SLUTT
 		
 	}
 
@@ -224,11 +247,11 @@ public class GPSComputer {
 		System.out.println("==============================================");
 
 		System.out.println("Total Time\t:\t" + GPSUtils.formatTime(totalTime()));
-		System.out.println("Total Distance\t:\t" + totalDistance());
-		System.out.println("Total elevation\t:\t" + totalElevation());
-		System.out.println("Max speed\t:\t" + maxSpeed());
-		System.out.println("Average speed\t:\t" + averageSpeed());
-		System.out.println("Energy\t:\t" + totalKcal(WEIGHT));
+		System.out.println("Total Distance\t:\t  " + totalDistance());
+		System.out.println("Total elevation\t:\t  " + totalElevation());
+		System.out.println("Max speed\t:\t  " + maxSpeed());
+		System.out.println("Average speed\t:\t  " + averageSpeed());
+		System.out.println("Energy\t\t:\t  " + totalKcal(WEIGHT));
 		System.out.println("==============================================");
 		// TODO - START
 
