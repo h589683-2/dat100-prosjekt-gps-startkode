@@ -110,7 +110,7 @@ public class GPSComputer {
 	public static double MS = 2.236936;
 
 	// beregn kcal gitt weight og tid der kjøres med en gitt hastighet
-	public double kcal(double weight, int secs, double speed) {
+  public double kcal(double weight, int secs, double speed) {
 
 		double kcal;
 
