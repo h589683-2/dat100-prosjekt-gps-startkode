@@ -60,7 +60,7 @@ public class ShowRoute extends EasyGraphics {
 		double minlat = GPSUtils.findMin(GPSUtils.getLatitudes(gpspoints));
 		double maxlat = GPSUtils.findMax(GPSUtils.getLatitudes(gpspoints));
 		
-		ystep = MAPXSIZE / (Math.abs(maxlat-minlat));
+		ystep = MAPYSIZE / (Math.abs(maxlat-minlat));
 		
 		return ystep;
 		
@@ -73,7 +73,7 @@ public class ShowRoute extends EasyGraphics {
 
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		ybase =  
 		
 		// TODO - SLUTT
 	}
