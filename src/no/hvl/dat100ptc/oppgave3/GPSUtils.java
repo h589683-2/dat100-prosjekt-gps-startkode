@@ -53,9 +53,9 @@ public class GPSUtils {
 		
 		for(int i = 0; i < gpspoints.length; i++) {
 			
-			String hent = String.valueOf(gpspoints[i]);
-			String sub = hent.substring( hent.indexOf('(') + 1, hent.indexOf(','));
-			lat [i] = Double.parseDouble(sub);
+			String hent = String.valueOf(gpspoints[i]);		//henter ut infoen i gpspoint [i] og gjør om til string
+			String sub = hent.substring( hent.indexOf('(') + 1, hent.indexOf(','));		//plukker ut infoen som ligger mellom ( og , som er latituden
+			lat [i] = Double.parseDouble(sub); //gjør latitude til double og putter i ny tabell
 			
 		}
 		return lat;
@@ -75,6 +75,7 @@ public class GPSUtils {
 		
 		for(int i = 0; i < gpspoints.length; i++) {
 			
+			//se getLatitudes
 			String hent = String.valueOf(gpspoints[i]);
 			String sub = hent.substring( hent.indexOf(',') + 1, hent.indexOf(')'));
 			lon[i] = Double.parseDouble(sub);
