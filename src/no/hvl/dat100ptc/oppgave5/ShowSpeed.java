@@ -64,7 +64,7 @@ public class ShowSpeed extends EasyGraphics {
 		
 		int avg2 = (int)gpscomputer.averageSpeed();
 		
-		setColor(0, 180, 0);
+		setColor(0, 190, 0);
 		drawLine(MARGIN, ybase- avg2, x, ybase - avg2 );
 	
 		// TODO - SLUTT

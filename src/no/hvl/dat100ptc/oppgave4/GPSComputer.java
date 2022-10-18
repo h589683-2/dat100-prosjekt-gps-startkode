@@ -161,62 +161,62 @@ public class GPSComputer {
 		double speedmph = speed * MS;
 		
 		//Må ha int for at switch skal funke
-//		int sw = (int) (speedmph);
-//		
-//		if (sw > 0) {
-//		switch(sw) {
-//		case 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9:
-//			met = 4.0;
-//			break;
-//			
-//		case 10 + 11:
-//			met = 6.0;
-//			break;
-//		
-//		case 12 + 13:
-//			met = 8.0;
-//			break;
-//		
-//		case 14 + 15:
-//			met = 10.0;
-//			break;
-//		
-//		case 16 + 17 + 18 + 19:
-//			met = 12.0;
-//			break;
-//			
-//		default:
-//			met = 16.0;
-//			break;
-//		}
-//		}
-//		
-//		kcal = met * weight * secs/3600;
-//		
-//		
-//		return kcal;
+		int sw = (int) (speedmph);
+		
+		if (sw > 0) {
+		switch(sw) {
+		case 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9:
+			met = 4.0;
+			break;
+			
+		case 10 + 11:
+			met = 6.0;
+			break;
+		
+		case 12 + 13:
+			met = 8.0;
+			break;
+		
+		case 14 + 15:
+			met = 10.0;
+			break;
+		
+		case 16 + 17 + 18 + 19:
+			met = 12.0;
+			break;
+			
+		default:
+			met = 16.0;
+			break;
+		}
+		}
+		
+		kcal = met * weight * secs/3600;
+		
+		
+		return kcal;
 
 		
 		// TODO - START
 		
-		if (speedmph < 10) {
-			met = 4.0;
-		} else if (speedmph >= 10 && speedmph < 12) {
-			met = 6.0;
-		} else if (speedmph >= 12 && speedmph < 14) {
-			met = 8.0;
-		} else if (speedmph >= 14 && speedmph < 16) {
-			met = 10.0;
-		} else if (speedmph >= 16 && speedmph < 20) {
-			met = 12.0;
-		} else if (speedmph >= 20) {
-			met = 16.0;
-		}
+//		if (speedmph < 10) {
+//			met = 4.0;
+//		} else if (speedmph >= 10 && speedmph < 12) {
+//			met = 6.0;
+//		} else if (speedmph >= 12 && speedmph < 14) {
+//			met = 8.0;
+//		} else if (speedmph >= 14 && speedmph < 16) {
+//			met = 10.0;
+//		} else if (speedmph >= 16 && speedmph < 20) {
+//			met = 12.0;
+//		} else if (speedmph >= 20) {
+//			met = 16.0;
+//		}
 		
 		
-		kcal = weight * met * (secs/3600.0);
+//		kcal = weight * met * (secs/3600.0);
 		
-		return kcal;
+//		return kcal;
 
 		// TODO - SLUTT
 		
