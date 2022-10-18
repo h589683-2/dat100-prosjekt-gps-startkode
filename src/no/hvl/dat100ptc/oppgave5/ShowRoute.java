@@ -46,7 +46,7 @@ public class ShowRoute extends EasyGraphics {
 		double minlon = GPSUtils.findMin(GPSUtils.getLongitudes(gpspoints));
 
 		double xstep = MAPXSIZE / (Math.abs(maxlon - minlon)); 
-
+		
 		return xstep;
 	}
 

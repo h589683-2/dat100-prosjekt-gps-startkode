@@ -20,9 +20,11 @@ public class GPSUtils {
 		for (double d : da) {
 			if (d > max) {
 				max = d;
+				
 			}
+	
 		}
-		
+
 		return max;
 	}
 
