@@ -88,7 +88,7 @@ public class GPSComputer {
 			
 			for (int i = 0; i < speed.length; i++) {
 				speed[i] = GPSUtils.speed(gpspoints[i], gpspoints[i+1]);
-				System.out.println("speed " + speed[i] + "\n");
+//				System.out.println("speed " + speed[i] + "\n");
 			}
 		
 		return speed;
