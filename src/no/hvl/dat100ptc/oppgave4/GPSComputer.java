@@ -118,8 +118,6 @@ public class GPSComputer {
 		// MET: Metabolic equivalent of task angir (kcal x kg-1 x h-1)
 		double met = 0.0;		
 		double speedmph = speed * MS;
-<<<<<<< HEAD
-=======
 		
 		//Må ha int for at switch skal funke
 //		int sw = (int) (speedmph);
@@ -156,12 +154,7 @@ public class GPSComputer {
 //		
 //		
 //		return kcal;
->>>>>>> branch 'master' of https://github.com/h589683-2/dat100-prosjekt-gps-startkode.git
 
-<<<<<<< HEAD
-=======
-	
->>>>>>> branch 'master' of https://github.com/h589683-2/dat100-prosjekt-gps-startkode.git
 		
 		// TODO - START
 		
@@ -214,24 +207,15 @@ public class GPSComputer {
 
 		System.out.println("==============================================");
 
-		System.out.println("Total Time\t:\t" + GPSUtils.formatTime(totalTime()));
-<<<<<<< HEAD
-		System.out.println("Total Distance\t:\t" + totalDistance());
-		System.out.println("Total elevation\t:\t" + totalElevation());
-		System.out.println("Max speed\t:\t" + maxSpeed());
-		System.out.println("Average speed\t:\t" + averageSpeed());
-		System.out.println("Energy\t:\t" + totalKcal());
-=======
 		System.out.println("Total Distance\t:\t  " + totalDistance());
 		System.out.println("Total elevation\t:\t  " + totalElevation());
 		System.out.println("Max speed\t:\t  " + maxSpeed());
 		System.out.println("Average speed\t:\t  " + averageSpeed());
 		System.out.println("Energy\t\t:\t  " + totalKcal(WEIGHT));
 		System.out.println("==============================================");
->>>>>>> branch 'master' of https://github.com/h589683-2/dat100-prosjekt-gps-startkode.git
 		// TODO - START
 
-		throw new UnsupportedOperationException(TODO.method());
+
 		
 		// TODO - SLUTT
 		
