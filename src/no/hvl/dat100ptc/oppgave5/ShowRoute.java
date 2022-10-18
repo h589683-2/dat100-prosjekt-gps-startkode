@@ -84,14 +84,14 @@ public class ShowRoute extends EasyGraphics {
 		for(int i = 0; i < gpspoints.length; i++) {
 			
 			x = MARGIN + (int) (gpspoints[i].getLongitude() - minLon * xstep());
-			
+
 			y = ybase - (int) (gpspoints[i].getLatitude() - minLat * ystep()); 
+
+			y = (int) (ybase - (gpspoints[i].getLatitude() -minLat) * ystep()); 
+			System.out.println(x);
+			System.out.println(y);
+
 			
-			
-			if(i == 0) {
-				xp = x;
-				yp = y;
-			}
 			setColor(0,255,0);
 			
 			drawLine(x,y,xp,yp);
