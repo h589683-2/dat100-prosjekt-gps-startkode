@@ -83,9 +83,9 @@ public class ShowRoute extends EasyGraphics {
 			
 		for(int i = 0; i < gpspoints.length; i++) {
 			
-			x = (int) (gpspoints[i].getLongitude() - minLon * xstep());
+			x = MARGIN + (int) (gpspoints[i].getLongitude() - minLon * xstep());
 			
-			y = (int) (gpspoints[i].getLatitude() - ybase * ystep()); 
+			y = ybase - (int) (gpspoints[i].getLatitude() - minLat * ystep()); 
 			
 			
 			if(i == 0) {
