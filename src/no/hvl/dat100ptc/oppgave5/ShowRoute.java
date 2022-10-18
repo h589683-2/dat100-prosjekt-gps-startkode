@@ -73,7 +73,7 @@ public class ShowRoute extends EasyGraphics {
 
 		// TODO - START
 		
-		ybase =  
+		throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - SLUTT
 	}

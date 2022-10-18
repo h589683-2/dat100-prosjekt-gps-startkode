@@ -16,7 +16,7 @@ public class GPSData {
 		this.antall = 0;
 		// TODO - SLUTT
 	}
-
+	
 	public GPSPoint[] getGPSPoints() {
 		return this.gpspoints;
 	}
@@ -46,7 +46,6 @@ public class GPSData {
 		gpspoint = GPSDataConverter.convert(time, latitude, longitude, elevation);
 		return insertGPS(gpspoint);
 		
-
 		// TODO - SLUTT
 		
 	}
@@ -54,7 +53,7 @@ public class GPSData {
 	public void print() {
 
 		System.out.println("====== Konvertert GPS Data - START ======");
-
+		
 		// TODO - START
 
 		for (int i = 0; i < gpspoints.length; i++) {
@@ -64,6 +63,6 @@ public class GPSData {
 		// TODO - SLUTT
 		
 		 System.out.println("====== Konvertert GPS Data - SLUTT ======");
-
+		 
 	}
 }
